@@ -4,65 +4,112 @@ const phoneClean = '6149023793';
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gray-900 text-white py-12">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-4 gap-8">
-      <!-- Company info -->
-      <div>
-        <h3 class="text-xl font-bold mb-4">Columbus Concrete & Design Co</h3>
-        <p class="text-gray-400 text-sm mb-4">
-          Professional concrete contractors serving Columbus, Ohio and surrounding areas. Quality craftsmanship, competitive pricing, and exceptional service.
+<footer class="bg-primary text-white">
+  <!-- Main Footer -->
+  <div class="max-w-7xl mx-auto px-4 py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- Company Info -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
+            <span class="text-white font-black text-xl">C</span>
+          </div>
+          <div>
+            <span class="text-lg font-bold block">Columbus Concrete</span>
+            <span class="text-sm text-secondary-light">& Design Co</span>
+          </div>
+        </div>
+        <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+          Professional concrete contractors serving Columbus, OH and the greater Franklin County area. Quality craftsmanship, competitive pricing, and customer satisfaction guaranteed.
         </p>
-        <a href={`tel:${phoneClean}`} class="text-secondary font-semibold text-lg hover:text-secondary-light transition">
-          {phone}
-        </a>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="bg-secondary/20 p-2 rounded-lg">
+            <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-xs text-gray-400">Call Us Now</p>
+            <a href={`tel:${phoneClean}`} class="font-bold text-lg hover:text-secondary transition">{phone}</a>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 text-sm text-gray-400">
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Licensed
+          </span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            Insured
+          </span>
+        </div>
       </div>
       
       <!-- Services -->
       <div>
-        <h4 class="font-semibold mb-4">Services</h4>
-        <ul class="space-y-2 text-gray-400 text-sm">
-          <li><a href="/services/concrete-driveways/" class="hover:text-white transition">Concrete Driveways</a></li>
-          <li><a href="/services/concrete-patios/" class="hover:text-white transition">Concrete Patios</a></li>
-          <li><a href="/services/concrete-slabs/" class="hover:text-white transition">Concrete Slabs</a></li>
-          <li><a href="/services/stamped-concrete/" class="hover:text-white transition">Stamped Concrete</a></li>
-          <li><a href="/services/concrete-foundations/" class="hover:text-white transition">Foundations</a></li>
+        <h4 class="font-bold text-lg mb-6">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="/services/concrete-driveways/" class="text-gray-400 hover:text-secondary transition text-sm">Concrete Driveways</a></li>
+          <li><a href="/services/concrete-patios/" class="text-gray-400 hover:text-secondary transition text-sm">Concrete Patios</a></li>
+          <li><a href="/services/stamped-concrete/" class="text-gray-400 hover:text-secondary transition text-sm">Stamped Concrete</a></li>
+          <li><a href="/services/concrete-slabs/" class="text-gray-400 hover:text-secondary transition text-sm">Concrete Slabs</a></li>
+          <li><a href="/services/concrete-foundations/" class="text-gray-400 hover:text-secondary transition text-sm">Foundations</a></li>
+          <li><a href="/services/concrete-walkways/" class="text-gray-400 hover:text-secondary transition text-sm">Walkways & Sidewalks</a></li>
+          <li><a href="/services/concrete-repair/" class="text-gray-400 hover:text-secondary transition text-sm">Concrete Repair</a></li>
+          <li><a href="/services/decorative-concrete/" class="text-gray-400 hover:text-secondary transition text-sm">Decorative Concrete</a></li>
         </ul>
       </div>
       
       <!-- Service Areas -->
       <div>
-        <h4 class="font-semibold mb-4">Service Areas</h4>
-        <ul class="space-y-2 text-gray-400 text-sm">
-          <li><a href="/locations/dublin/" class="hover:text-white transition">Dublin</a></li>
-          <li><a href="/locations/westerville/" class="hover:text-white transition">Westerville</a></li>
-          <li><a href="/locations/grove-city/" class="hover:text-white transition">Grove City</a></li>
-          <li><a href="/locations/hilliard/" class="hover:text-white transition">Hilliard</a></li>
-          <li><a href="/locations/" class="hover:text-white transition">All Areas →</a></li>
+        <h4 class="font-bold text-lg mb-6">Service Areas</h4>
+        <ul class="space-y-3">
+          <li><a href="/locations/dublin/" class="text-gray-400 hover:text-secondary transition text-sm">Dublin, OH</a></li>
+          <li><a href="/locations/westerville/" class="text-gray-400 hover:text-secondary transition text-sm">Westerville, OH</a></li>
+          <li><a href="/locations/grove-city/" class="text-gray-400 hover:text-secondary transition text-sm">Grove City, OH</a></li>
+          <li><a href="/locations/hilliard/" class="text-gray-400 hover:text-secondary transition text-sm">Hilliard, OH</a></li>
+          <li><a href="/locations/gahanna/" class="text-gray-400 hover:text-secondary transition text-sm">Gahanna, OH</a></li>
+          <li><a href="/locations/reynoldsburg/" class="text-gray-400 hover:text-secondary transition text-sm">Reynoldsburg, OH</a></li>
+          <li><a href="/locations/upper-arlington/" class="text-gray-400 hover:text-secondary transition text-sm">Upper Arlington, OH</a></li>
+          <li><a href="/locations/" class="text-secondary hover:text-secondary-light transition text-sm font-semibold">View All Areas →</a></li>
         </ul>
       </div>
       
-      <!-- Contact -->
+      <!-- Company -->
       <div>
-        <h4 class="font-semibold mb-4">Contact Us</h4>
-        <p class="text-gray-400 text-sm mb-2">Columbus, OH 43215</p>
-        <p class="text-gray-400 text-sm mb-2">Mon-Fri: 7AM-6PM</p>
-        <p class="text-gray-400 text-sm mb-4">Sat: 8AM-4PM</p>
-        <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-6 py-3 rounded-lg font-semibold transition inline-block">
-          Get Free Estimate
-        </a>
+        <h4 class="font-bold text-lg mb-6">Company</h4>
+        <ul class="space-y-3">
+          <li><a href="/about/" class="text-gray-400 hover:text-secondary transition text-sm">About Us</a></li>
+          <li><a href="/contact/" class="text-gray-400 hover:text-secondary transition text-sm">Contact</a></li>
+          <li><a href="/privacy/" class="text-gray-400 hover:text-secondary transition text-sm">Privacy Policy</a></li>
+          <li><a href="/terms/" class="text-gray-400 hover:text-secondary transition text-sm">Terms of Service</a></li>
+        </ul>
+        
+        <h4 class="font-bold text-lg mt-8 mb-4">Hours</h4>
+        <div class="text-sm text-gray-400 space-y-1">
+          <p>Monday - Friday: 7AM - 6PM</p>
+          <p>Saturday: 8AM - 4PM</p>
+          <p>Sunday: Closed</p>
+        </div>
       </div>
     </div>
-    
-    <!-- Bottom bar -->
-    <div class="border-t border-gray-800 mt-8 pt-8">
+  </div>
+  
+  <!-- Bottom Bar -->
+  <div class="border-t border-gray-700">
+    <div class="max-w-7xl mx-auto px-4 py-6">
       <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-gray-500 text-sm">
-          © {currentYear} Columbus Concrete & Design Co. All rights reserved.
+        <p class="text-gray-400 text-sm text-center md:text-left">
+          © {currentYear} Columbus Concrete & Design Co. All rights reserved. | Serving Columbus, OH & Franklin County
         </p>
-        <div class="flex gap-6 text-gray-500 text-sm">
-          <a href="/privacy/" class="hover:text-white transition">Privacy Policy</a>
-          <a href="/terms/" class="hover:text-white transition">Terms of Service</a>
+        <div class="flex items-center gap-6 text-sm">
+          <a href="/privacy/" class="text-gray-400 hover:text-secondary transition">Privacy</a>
+          <a href="/terms/" class="text-gray-400 hover:text-secondary transition">Terms</a>
+          <a href="/contact/" class="text-gray-400 hover:text-secondary transition">Contact</a>
         </div>
       </div>
     </div>

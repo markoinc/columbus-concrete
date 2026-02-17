@@ -3,102 +3,344 @@
     "slug": "concrete-driveways",
     "name": "Concrete Driveways",
     "shortName": "Driveways",
-    "title": "Concrete Driveway Installation Columbus OH",
-    "description": "Professional concrete driveway installation and replacement in Columbus, OH. Durable, long-lasting driveways that enhance your home's curb appeal.",
+    "title": "Concrete Driveway Installation Columbus OH | Expert Contractors",
+    "description": "Professional concrete driveway installation and replacement in Columbus, OH. Durable, long-lasting driveways that enhance your home's curb appeal. Free estimates, quality guaranteed.",
     "icon": "🚗",
     "heroText": "Transform Your Home's Entrance with a Beautiful Concrete Driveway",
+    "priceRange": "$8-15 per sq ft",
+    "timeline": "2-4 days",
     "benefits": [
       "Lasts 25-30 years with proper maintenance",
-      "Increases property value",
-      "Low maintenance requirements",
-      "Withstands Ohio weather extremes",
-      "Multiple finish options available"
+      "Increases property value by up to 10%",
+      "Low maintenance compared to asphalt",
+      "Withstands Ohio's freeze-thaw cycles",
+      "Multiple finish and color options",
+      "Stronger than asphalt alternatives"
     ],
-    "content": "A concrete driveway is one of the best investments you can make for your home. Unlike asphalt that needs frequent resealing or gravel that shifts and requires constant maintenance, concrete provides a permanent, durable surface that enhances your property's value and appearance.\n\nOur Columbus concrete driveway services include new installations, replacement of damaged driveways, widening existing driveways, and decorative finishes. We work with you to design the perfect driveway that complements your home's architecture and fits your budget.\n\nWe use high-quality concrete mixes rated for Ohio's freeze-thaw cycles, proper reinforcement techniques, and professional finishing methods to ensure your driveway lasts for decades."
+    "process": [
+      "Free on-site consultation and measurement",
+      "Detailed written estimate within 24 hours",
+      "Permit acquisition if required",
+      "Existing surface removal and disposal",
+      "Grade preparation and compaction",
+      "Form setting and reinforcement installation",
+      "Concrete pouring and finishing",
+      "Curing and sealing application"
+    ],
+    "faqs": [
+      {
+        "question": "How much does a concrete driveway cost in Columbus?",
+        "answer": "Concrete driveway costs in Columbus range from $8-15 per square foot. A typical 600 sq ft driveway costs $4,800-$9,000. Stamped or decorative finishes add $2-5 per sq ft. We provide free detailed estimates for your specific project."
+      },
+      {
+        "question": "How long does a concrete driveway last?",
+        "answer": "A properly installed concrete driveway lasts 25-30 years in the Columbus area. With regular sealing every 2-3 years, some driveways last 40+ years. Our quality installation and Ohio-rated concrete mixes ensure maximum longevity."
+      },
+      {
+        "question": "Can you pour concrete in Ohio winter?",
+        "answer": "We can pour concrete when temperatures are consistently above 40°F. For cold-weather pours, we use heated water, insulated blankets, and accelerating admixtures. We typically schedule November-March work for mild weather windows."
+      }
+    ]
   },
   {
     "slug": "concrete-patios",
     "name": "Concrete Patios",
     "shortName": "Patios",
-    "title": "Concrete Patio Contractors Columbus OH",
-    "description": "Custom concrete patio design and installation in Columbus. Create the perfect outdoor living space for entertaining and relaxation.",
+    "title": "Concrete Patio Contractors Columbus OH | Custom Designs",
+    "description": "Custom concrete patio design and installation in Columbus, OH. Create the perfect outdoor living space for entertaining and relaxation. Stamped, colored, and decorative options available.",
     "icon": "🏡",
     "heroText": "Create Your Perfect Outdoor Living Space",
+    "priceRange": "$10-20 per sq ft",
+    "timeline": "2-5 days",
     "benefits": [
       "Extends your living area outdoors",
       "Customizable shapes and designs",
       "Works with any backyard layout",
       "Complements landscaping features",
-      "Perfect for entertaining"
+      "Perfect for entertaining guests",
+      "Slip-resistant finish options"
     ],
-    "content": "A well-designed concrete patio extends your living space into the outdoors, creating the perfect area for family gatherings, barbecues, and relaxation. Our team specializes in creating custom patios that fit your lifestyle and complement your home's architecture.\n\nWe offer various finish options including broom finish for slip resistance, exposed aggregate for texture, and stamped patterns that mimic natural stone, brick, or tile. Whether you want a simple rectangular patio or a curved multi-level design, we have the expertise to bring your vision to life.\n\nOur patios are built to withstand heavy furniture, foot traffic, and Ohio's challenging weather conditions. We ensure proper drainage and reinforcement so your patio remains level and crack-free for years to come."
+    "process": [
+      "Design consultation and layout planning",
+      "Site assessment and drainage evaluation",
+      "Layout marking and approval",
+      "Excavation and base preparation",
+      "Gravel base installation and compaction",
+      "Form construction and reinforcement",
+      "Concrete placement and finishing",
+      "Decorative treatments and sealing"
+    ],
+    "faqs": [
+      {
+        "question": "What size patio should I build?",
+        "answer": "For dining, plan 25 sq ft per person plus furniture space. A 12x12 (144 sq ft) patio seats 4-6 comfortably. For entertaining, 300-400 sq ft works well. We help design the perfect size for your needs and budget."
+      },
+      {
+        "question": "Is stamped concrete good for patios?",
+        "answer": "Stamped concrete is excellent for patios - it offers the look of stone, brick, or tile at 30-50% less cost. It's durable, customizable, and easier to maintain than individual pavers. We offer dozens of patterns and colors."
+      },
+      {
+        "question": "Do concrete patios crack in Ohio weather?",
+        "answer": "All concrete can develop minor cracks, but proper installation minimizes this. We use control joints, proper reinforcement, and Ohio-rated concrete mixes designed for freeze-thaw cycles. Small hairline cracks are normal and don't affect structural integrity."
+      }
+    ]
   },
   {
     "slug": "concrete-slabs",
     "name": "Concrete Slabs",
     "shortName": "Slabs",
-    "title": "Concrete Slab Installation Columbus OH",
-    "description": "Commercial and residential concrete slab installation in Columbus. Garages, sheds, workshops, and more.",
+    "title": "Concrete Slab Installation Columbus OH | Garages, Sheds, More",
+    "description": "Commercial and residential concrete slab installation in Columbus. Garages, sheds, workshops, pole barns, and more. Engineered for proper load bearing and drainage.",
     "icon": "🏗️",
-    "heroText": "Solid Foundations for Any Project",
+    "heroText": "Solid Foundations for Any Structure",
+    "priceRange": "$6-12 per sq ft",
+    "timeline": "1-3 days",
     "benefits": [
       "Level and stable surface",
       "Proper load-bearing capacity",
-      "Moisture barrier options",
+      "Moisture barrier options available",
       "Various thickness options",
-      "Suitable for any structure"
+      "Suitable for any structure type",
+      "Meets building code requirements"
     ],
-    "content": "Whether you're building a garage, workshop, shed, or outdoor structure, a properly installed concrete slab provides the solid foundation your project needs. Our team has extensive experience pouring slabs for residential and commercial applications throughout Columbus and Franklin County.\n\nWe begin each slab project with proper site preparation, including grading, compaction, and vapor barrier installation when needed. Our slabs are poured to the appropriate thickness with proper reinforcement based on the intended use and load requirements.\n\nFrom small utility sheds to large commercial buildings, we deliver slabs that meet or exceed building codes and provide decades of reliable service."
+    "process": [
+      "Site evaluation and planning",
+      "Permit coordination if needed",
+      "Excavation to proper depth",
+      "Gravel base installation",
+      "Vapor barrier placement",
+      "Rebar or wire mesh installation",
+      "Concrete pour and leveling",
+      "Finishing and joint cutting"
+    ],
+    "faqs": [
+      {
+        "question": "How thick should a concrete slab be?",
+        "answer": "Thickness depends on use: 4 inches for sheds and light storage, 5-6 inches for garages and workshops, 6-8 inches for heavy equipment. We engineer each slab for its intended load and use."
+      },
+      {
+        "question": "Do I need a permit for a concrete slab?",
+        "answer": "In Franklin County, slabs for detached structures over 200 sq ft typically need permits. Slabs for garages always need permits. We handle permit paperwork and inspections as part of our service."
+      },
+      {
+        "question": "How long until I can use my new slab?",
+        "answer": "Light foot traffic after 24-48 hours, vehicles after 7 days, heavy equipment after 28 days when full strength is reached. We provide specific guidance based on your project."
+      }
+    ]
   },
   {
     "slug": "stamped-concrete",
     "name": "Stamped Concrete",
     "shortName": "Stamped",
-    "title": "Stamped Concrete Columbus OH",
-    "description": "Beautiful stamped concrete patterns that mimic natural stone, brick, and tile at a fraction of the cost. Expert installation in Columbus.",
+    "title": "Stamped Concrete Columbus OH | Decorative Patterns & Colors",
+    "description": "Beautiful stamped concrete patterns that mimic natural stone, brick, and tile at a fraction of the cost. Expert installation in Columbus and Franklin County.",
     "icon": "✨",
     "heroText": "The Beauty of Natural Stone at Concrete Prices",
+    "priceRange": "$12-25 per sq ft",
+    "timeline": "3-5 days",
     "benefits": [
       "Looks like natural stone or brick",
-      "Fraction of the cost of pavers",
-      "Seamless installation",
-      "Many patterns and colors",
-      "Easier to maintain"
+      "Costs 30-50% less than pavers",
+      "Seamless installation - no weeds",
+      "50+ patterns and unlimited colors",
+      "Easier to maintain than pavers",
+      "Adds significant curb appeal"
     ],
-    "content": "Stamped concrete offers the beauty and elegance of natural stone, brick, slate, or tile at a fraction of the cost. Using specialized stamps and color techniques, we create stunning surfaces that enhance any property's appearance.\n\nOur stamped concrete services are perfect for driveways, patios, pool decks, walkways, and more. We offer dozens of patterns including cobblestone, flagstone, brick, wood plank, and custom designs. Colors can be matched to complement your home's exterior or create a unique accent.\n\nUnlike individual pavers that can shift, settle, or allow weed growth, stamped concrete provides a seamless surface that's easier to maintain while delivering the same high-end appearance."
+    "process": [
+      "Pattern and color consultation",
+      "Site preparation and grading",
+      "Base material installation",
+      "Form setting and reinforcement",
+      "Concrete placement",
+      "Color hardener application",
+      "Pattern stamping while wet",
+      "Release agent and sealing"
+    ],
+    "faqs": [
+      {
+        "question": "How long does stamped concrete last?",
+        "answer": "Stamped concrete lasts 25-30+ years with proper care. Resealing every 2-3 years maintains the color and protects the surface. It outlasts most pavers and requires less maintenance."
+      },
+      {
+        "question": "Is stamped concrete slippery when wet?",
+        "answer": "Standard stamped concrete can be slippery. We offer non-slip additives and textured patterns for pool decks and high-traffic areas. We always recommend slip-resistant finishes for exterior applications."
+      },
+      {
+        "question": "Can stamped concrete be repaired?",
+        "answer": "Yes, damaged sections can be repaired, though color matching can be challenging. Proper installation and maintenance prevent most damage. We warranty our stamped concrete work against installation defects."
+      }
+    ]
   },
   {
     "slug": "concrete-foundations",
     "name": "Concrete Foundations",
     "shortName": "Foundations",
-    "title": "Concrete Foundation Contractors Columbus OH",
-    "description": "Residential and commercial foundation services in Columbus. New construction, repairs, and reinforcement.",
+    "title": "Concrete Foundation Contractors Columbus OH | New & Repair",
+    "description": "Residential and commercial foundation services in Columbus. New construction, repairs, basement waterproofing, and structural reinforcement. Licensed and insured.",
     "icon": "🏠",
     "heroText": "Building Strong Foundations for Columbus Homes",
+    "priceRange": "$10-25 per sq ft",
+    "timeline": "5-14 days",
     "benefits": [
       "Engineered for your structure",
-      "Proper drainage included",
+      "Proper drainage systems",
       "Meets all building codes",
       "Reinforced for longevity",
+      "Waterproofing options",
       "Expert installation team"
     ],
-    "content": "Your foundation is the most critical component of any structure. A properly designed and installed foundation ensures your building remains stable, level, and protected from moisture damage for its entire lifespan.\n\nOur foundation services include new construction foundations, foundation repairs, basement waterproofing, and structural reinforcement. We work closely with builders, architects, and homeowners to deliver foundations engineered for specific soil conditions and structural requirements.\n\nWith years of experience in central Ohio's clay-heavy soils, we understand the unique challenges of building in this region and employ techniques that prevent common issues like settling, cracking, and water infiltration."
+    "process": [
+      "Site evaluation and soil testing",
+      "Engineering and permit acquisition",
+      "Excavation to proper depth",
+      "Footing forms and pour",
+      "Foundation wall forms",
+      "Rebar installation per spec",
+      "Concrete placement and curing",
+      "Waterproofing and backfill"
+    ],
+    "faqs": [
+      {
+        "question": "What type of foundation is best for Ohio?",
+        "answer": "Most Columbus homes use poured concrete foundations with footings below the 32-inch frost line. Crawl space or full basement depends on lot conditions and preferences. We evaluate each site individually."
+      },
+      {
+        "question": "How do I know if my foundation needs repair?",
+        "answer": "Warning signs include cracks wider than 1/4 inch, doors/windows sticking, uneven floors, water seepage, and visible bowing. We offer free foundation inspections and honest assessments."
+      },
+      {
+        "question": "Do you offer foundation waterproofing?",
+        "answer": "Yes, we provide interior and exterior waterproofing, drain tile systems, sump pump installation, and crack injection repairs. Waterproofing protects your investment and prevents moisture problems."
+      }
+    ]
   },
   {
     "slug": "concrete-walkways",
     "name": "Concrete Walkways",
     "shortName": "Walkways",
-    "title": "Concrete Walkway Installation Columbus OH",
-    "description": "Professional sidewalk and walkway installation in Columbus. Safe, attractive paths for homes and businesses.",
+    "title": "Concrete Walkway Installation Columbus OH | Sidewalks & Paths",
+    "description": "Professional sidewalk and walkway installation in Columbus. Safe, attractive paths for homes and businesses. ADA compliant options available.",
     "icon": "🚶",
     "heroText": "Safe and Beautiful Walkways for Your Property",
+    "priceRange": "$8-18 per sq ft",
+    "timeline": "1-3 days",
     "benefits": [
-      "ADA compliant options",
-      "Non-slip finishes available",
-      "Connects outdoor spaces",
+      "ADA compliant options available",
+      "Non-slip finishes for safety",
+      "Connects outdoor living spaces",
       "Enhances curb appeal",
-      "Durable in all weather"
+      "Durable in all weather",
+      "Multiple width options"
     ],
-    "content": "Well-designed walkways provide safe, attractive paths throughout your property while enhancing your landscaping and curb appeal. From front entry sidewalks to garden paths, our team creates walkways that are both functional and beautiful.\n\nWe offer various widths, finishes, and decorative options to match your property's style. Whether you prefer simple broom-finished concrete or elaborate stamped designs, we deliver professional results that last.\n\nAll our walkways are installed with proper slope for drainage and built to withstand heavy foot traffic and Ohio's freeze-thaw cycles."
+    "process": [
+      "Path layout and design",
+      "Utility location marking",
+      "Excavation and grading",
+      "Base material installation",
+      "Form setting and leveling",
+      "Concrete placement",
+      "Finish application",
+      "Joint cutting and sealing"
+    ],
+    "faqs": [
+      {
+        "question": "How wide should a walkway be?",
+        "answer": "Front entry walks should be 4-5 feet wide for two people side-by-side. Garden paths can be 2-3 feet. Commercial walks need 5+ feet for ADA compliance. We help determine the right width for your needs."
+      },
+      {
+        "question": "Can walkways be heated?",
+        "answer": "Yes, we install heated walkways using electric cables or hydronic tubing. Heated walks melt snow automatically - great for Columbus winters. Cost is higher but eliminates shoveling."
+      },
+      {
+        "question": "Do you repair existing sidewalks?",
+        "answer": "Yes, we repair cracks, raise sunken sections (mudjacking), and replace damaged portions. Sometimes repair is more cost-effective than replacement - we provide honest recommendations."
+      }
+    ]
+  },
+  {
+    "slug": "concrete-repair",
+    "name": "Concrete Repair",
+    "shortName": "Repair",
+    "title": "Concrete Repair Services Columbus OH | Cracks, Leveling, More",
+    "description": "Expert concrete repair services in Columbus. Crack repair, leveling, resurfacing, and restoration for driveways, patios, sidewalks, and more.",
+    "icon": "🔧",
+    "heroText": "Restore Your Concrete to Like-New Condition",
+    "priceRange": "$5-15 per sq ft",
+    "timeline": "1-2 days",
+    "benefits": [
+      "Costs less than replacement",
+      "Extends concrete lifespan",
+      "Fixes safety hazards",
+      "Improves appearance",
+      "Quick turnaround time",
+      "Prevents further damage"
+    ],
+    "process": [
+      "Damage assessment",
+      "Repair method recommendation",
+      "Surface preparation",
+      "Crack filling or patching",
+      "Leveling if needed",
+      "Resurfacing application",
+      "Finishing and texturing",
+      "Sealing for protection"
+    ],
+    "faqs": [
+      {
+        "question": "When should I repair vs replace concrete?",
+        "answer": "Repair when damage is limited to surface issues, small cracks, or isolated areas. Replace when concrete is extensively cracked, heaving, or settling significantly. We provide honest assessments."
+      },
+      {
+        "question": "What causes concrete to crack?",
+        "answer": "Common causes include ground movement, freeze-thaw cycles, tree roots, improper installation, and heavy loads. Ohio's clay soils and weather make proper installation crucial."
+      },
+      {
+        "question": "Can you fix uneven concrete?",
+        "answer": "Yes, mudjacking or foam lifting can raise sunken concrete back to level. This costs 50-75% less than replacement and takes just hours. Not all slabs are candidates - we evaluate each situation."
+      }
+    ]
+  },
+  {
+    "slug": "decorative-concrete",
+    "name": "Decorative Concrete",
+    "shortName": "Decorative",
+    "title": "Decorative Concrete Columbus OH | Colors, Textures, Finishes",
+    "description": "Transform ordinary concrete into extraordinary surfaces. Stained, colored, exposed aggregate, and specialty finishes for Columbus homes and businesses.",
+    "icon": "🎨",
+    "heroText": "Artistry Meets Durability in Decorative Concrete",
+    "priceRange": "$10-30 per sq ft",
+    "timeline": "2-5 days",
+    "benefits": [
+      "Unlimited design possibilities",
+      "Unique custom look",
+      "More durable than alternatives",
+      "Works on new or existing concrete",
+      "Increases property value",
+      "Low maintenance beauty"
+    ],
+    "process": [
+      "Design consultation",
+      "Color and finish selection",
+      "Surface preparation",
+      "Base concrete work if needed",
+      "Color application method",
+      "Pattern or texture creation",
+      "Sealer application",
+      "Final inspection"
+    ],
+    "faqs": [
+      {
+        "question": "What decorative options are available?",
+        "answer": "Options include integral coloring, staining (acid or water-based), stamped patterns, exposed aggregate, polished concrete, and epoxy coatings. We can combine techniques for unique looks."
+      },
+      {
+        "question": "Can existing concrete be stained?",
+        "answer": "Yes, most concrete can be stained to add color and character. The concrete must be clean and free of sealers. Acid stains create variegated, natural looks while water-based stains offer more consistent color."
+      },
+      {
+        "question": "How do you maintain decorative concrete?",
+        "answer": "Regular cleaning with mild soap and resealing every 2-3 years keeps decorative concrete looking great. Avoid harsh chemicals and deicing salts. We provide specific care instructions for your finish."
+      }
+    ]
   }
 ]

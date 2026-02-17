@@ -4,19 +4,31 @@ interface Props {
   title?: string;
   subtitle?: string;
   dark?: boolean;
+  compact?: boolean;
 }
 
 const { 
   source = 'columbus-concrete-co',
   title = "Get Your Free Estimate",
   subtitle = "Fill out the form below and we'll get back to you within 24 hours.",
-  dark = false
+  dark = false,
+  compact = false
 } = Astro.props;
 
 const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BXbnD/webhook-trigger/1a8ea669-6d42-4e42-be26-e3bbbd5c1a82";
 ---
 
-<div class={`rounded-xl p-8 ${dark ? 'bg-primary text-white' : 'bg-white shadow-xl'}`}>
+<div class={`rounded-2xl ${compact ? 'p-6' : 'p-8'} ${dark ? 'bg-primary text-white' : 'bg-white shadow-2xl border border-gray-100'}`}>
+  <!-- Urgency Banner -->
+  <div class={`-mx-8 -mt-8 ${compact ? '-mx-6 -mt-6' : ''} mb-6 ${dark ? 'bg-secondary' : 'bg-secondary'} text-white px-4 py-2.5 rounded-t-2xl text-center`}>
+    <p class="text-sm font-semibold flex items-center justify-center gap-2">
+      <svg class="w-4 h-4 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+      </svg>
+      🔥 Limited Spots This Week – Request Your Quote Now!
+    </p>
+  </div>
+
   <h3 class="text-2xl font-bold mb-2">{title}</h3>
   <p class={`mb-6 ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{subtitle}</p>
   
@@ -31,7 +43,7 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
     
     <div class="grid md:grid-cols-2 gap-4">
       <div>
-        <label for="firstName" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        <label for="firstName" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
           First Name *
         </label>
         <input 
@@ -39,12 +51,12 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
           id="firstName" 
           name="firstName" 
           required
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+          class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
           placeholder="John"
         />
       </div>
       <div>
-        <label for="lastName" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        <label for="lastName" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
           Last Name *
         </label>
         <input 
@@ -52,14 +64,14 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
           id="lastName" 
           name="lastName" 
           required
-          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+          class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
           placeholder="Smith"
         />
       </div>
     </div>
     
     <div>
-      <label for="email" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+      <label for="email" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
         Email Address *
       </label>
       <input 
@@ -67,13 +79,13 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
         id="email" 
         name="email" 
         required
-        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
         placeholder="john@example.com"
       />
     </div>
     
     <div>
-      <label for="phone" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+      <label for="phone" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
         Phone Number *
       </label>
       <input 
@@ -81,20 +93,20 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
         id="phone" 
         name="phone" 
         required
-        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
         placeholder="(614) 555-1234"
       />
     </div>
     
     <div>
-      <label for="serviceType" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+      <label for="serviceType" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
         Service Needed *
       </label>
       <select 
         id="serviceType" 
         name="serviceType" 
         required
-        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
       >
         <option value="">Select a service...</option>
         <option value="driveway">Concrete Driveway</option>
@@ -104,54 +116,83 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
         <option value="foundation">Foundation Work</option>
         <option value="walkway">Walkways/Sidewalks</option>
         <option value="repair">Concrete Repair</option>
+        <option value="decorative">Decorative Concrete</option>
         <option value="other">Other</option>
       </select>
     </div>
     
-    <div>
-      <label for="message" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
-        Tell Us About Your Project
-      </label>
-      <textarea 
-        id="message" 
-        name="message" 
-        rows="3"
-        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
-        placeholder="Describe your project, approximate size, timeline, etc."
-      ></textarea>
-    </div>
+    {!compact && (
+      <div>
+        <label for="message" class={`block text-sm font-semibold mb-1.5 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+          Project Details (Optional)
+        </label>
+        <textarea 
+          id="message" 
+          name="message" 
+          rows="3"
+          class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:ring-2 focus:ring-secondary focus:border-secondary text-gray-900 transition"
+          placeholder="Approximate size, timeline, specific requirements..."
+        ></textarea>
+      </div>
+    )}
     
-    <div class="flex items-start gap-2">
+    <div class="flex items-start gap-3">
       <input 
         type="checkbox" 
         id="consent" 
         name="consent" 
         required
-        class="mt-1"
+        class="mt-1 w-4 h-4 text-secondary border-gray-300 rounded focus:ring-secondary"
       />
       <label for="consent" class={`text-sm ${dark ? 'text-gray-300' : 'text-gray-600'}`}>
-        I agree to be contacted about my project. 
-        <a href="/privacy/" class="underline">Privacy Policy</a>
+        I agree to be contacted about my project via phone, email, or text. 
+        <a href="/privacy/" class="underline hover:text-secondary transition">Privacy Policy</a>
       </label>
     </div>
     
     <button 
       type="submit"
-      class="w-full bg-secondary hover:bg-secondary-dark text-white font-bold py-4 px-6 rounded-lg text-lg transition transform hover:scale-[1.02] shadow-lg"
+      class="w-full bg-secondary hover:bg-secondary-dark text-white font-bold py-4 px-6 rounded-xl text-lg transition transform hover:scale-[1.02] shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
     >
-      Get My Free Estimate →
+      <span>Get My Free Estimate</span>
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+      </svg>
     </button>
     
-    <p class={`text-center text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
-      🔒 Your information is secure and confidential
-    </p>
+    <!-- Trust indicators below form -->
+    <div class={`pt-4 border-t ${dark ? 'border-white/20' : 'border-gray-200'}`}>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs">
+        <span class={`flex items-center gap-1.5 ${dark ? 'text-gray-300' : 'text-gray-500'}`}>
+          <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          100% Free Quote
+        </span>
+        <span class={`flex items-center gap-1.5 ${dark ? 'text-gray-300' : 'text-gray-500'}`}>
+          <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          No Obligation
+        </span>
+        <span class={`flex items-center gap-1.5 ${dark ? 'text-gray-300' : 'text-gray-500'}`}>
+          <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
+          </svg>
+          Secure & Private
+        </span>
+      </div>
+    </div>
   </form>
   
   <div id="form-success" class="hidden text-center py-8">
-    <div class="text-5xl mb-4">✅</div>
-    <h4 class="text-xl font-bold mb-2">Thank You!</h4>
-    <p class={dark ? 'text-gray-300' : 'text-gray-600'}>
-      We'll contact you within 24 hours to discuss your project.
+    <div class="text-6xl mb-4">✅</div>
+    <h4 class="text-2xl font-bold mb-2">Thank You!</h4>
+    <p class={`mb-4 ${dark ? 'text-gray-300' : 'text-gray-600'}`}>
+      We've received your request and will contact you within 24 hours to discuss your project.
+    </p>
+    <p class={`text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+      For immediate assistance, call us at <a href="tel:6149023793" class="text-secondary font-semibold">(614) 902-3793</a>
     </p>
   </div>
 </div>
@@ -167,6 +208,11 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
     
     form?.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = '<svg class="animate-spin h-5 w-5 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+      submitBtn.disabled = true;
       
       const formData = new FormData(form);
       const webhookUrl = form.dataset.webhook;
@@ -192,12 +238,14 @@ const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BX
           // Redirect to thank you page after short delay
           setTimeout(() => {
             window.location.href = '/thankyou/';
-          }, 1500);
+          }, 2000);
         } else {
-          alert('There was an error submitting your form. Please try again or call us directly at (614) 902-3793.');
+          throw new Error('Form submission failed');
         }
       } catch (error) {
         console.error('Form submission error:', error);
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
         alert('There was an error submitting your form. Please try again or call us directly at (614) 902-3793.');
       }
     });

@@ -8,7 +8,7 @@ interface Props {
 
 const { 
   title, 
-  description = "Columbus Concrete & Design Co - Professional concrete contractors serving Columbus, OH. Driveways, patios, slabs, stamped concrete. Call (614) 902-3793 for free estimate.",
+  description = "Columbus Concrete & Design Co - Professional concrete contractors serving Columbus, OH and Franklin County. Driveways, patios, slabs, stamped concrete. Call (614) 902-3793 for free estimate.",
   canonicalUrl,
   schema
 } = Astro.props;
@@ -20,6 +20,7 @@ const phoneClean = '6149023793';
 
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import StickyCTA from '../components/StickyCTA.astro';
 ---
 
 <!DOCTYPE html>
@@ -29,7 +30,9 @@ import Footer from '../components/Footer.astro';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description}>
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="concrete contractors Columbus OH, concrete driveway Columbus, concrete patio Columbus, stamped concrete Columbus, Franklin County concrete">
+  <meta name="keywords" content="concrete contractors Columbus OH, concrete driveway Columbus, concrete patio Columbus, stamped concrete Columbus, Franklin County concrete, Ohio concrete contractor">
+  <meta name="geo.region" content="US-OH">
+  <meta name="geo.placename" content="Columbus">
   
   <title>{fullTitle}</title>
   
@@ -38,10 +41,11 @@ import Footer from '../components/Footer.astro';
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   
   <!-- Open Graph -->
   <meta property="og:type" content="website">
@@ -50,6 +54,7 @@ import Footer from '../components/Footer.astro';
   <meta property="og:site_name" content="Columbus Concrete & Design Co">
   <meta property="og:url" content={canonicalUrl || siteUrl}>
   <meta property="og:image" content={`${siteUrl}/images/og-image.jpg`}>
+  <meta property="og:locale" content="en_US">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -67,13 +72,15 @@ import Footer from '../components/Footer.astro';
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
     "@id": "https://columbusconcretecontractor.co/#business",
     "name": "Columbus Concrete & Design Co",
     "image": "https://columbusconcretecontractor.co/images/logo.png",
     "telephone": "(614) 902-3793",
+    "email": "info@columbusconcretecontractor.co",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Columbus",
       "addressLocality": "Columbus",
       "addressRegion": "OH",
       "postalCode": "43215",
@@ -86,9 +93,18 @@ import Footer from '../components/Footer.astro';
     },
     "url": "https://columbusconcretecontractor.co/",
     "priceRange": "$$",
+    "currenciesAccepted": "USD",
+    "paymentAccepted": "Cash, Credit Card, Check",
     "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "127",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
     "areaServed": [
-      {"@type": "City", "name": "Columbus"},
+      {"@type": "City", "name": "Columbus", "containedIn": "Ohio"},
       {"@type": "City", "name": "Dublin"},
       {"@type": "City", "name": "Westerville"},
       {"@type": "City", "name": "Grove City"},
@@ -96,20 +112,28 @@ import Footer from '../components/Footer.astro';
       {"@type": "City", "name": "Reynoldsburg"},
       {"@type": "City", "name": "Gahanna"},
       {"@type": "City", "name": "Upper Arlington"},
-      {"@type": "AdministrativeArea", "name": "Franklin County"}
+      {"@type": "City", "name": "Worthington"},
+      {"@type": "City", "name": "Powell"},
+      {"@type": "City", "name": "Pickerington"},
+      {"@type": "City", "name": "New Albany"},
+      {"@type": "AdministrativeArea", "name": "Franklin County"},
+      {"@type": "AdministrativeArea", "name": "Delaware County"},
+      {"@type": "AdministrativeArea", "name": "Fairfield County"},
+      {"@type": "AdministrativeArea", "name": "Licking County"}
     ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Concrete Services",
       "itemListElement": [
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Driveways"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Patios"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Slabs"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stamped Concrete"}},
-        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Foundations"}}
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Driveways", "description": "Professional driveway installation and replacement"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Patios", "description": "Custom patio design and installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Slabs", "description": "Garage, shed, and commercial slab installation"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Stamped Concrete", "description": "Decorative stamped patterns and colors"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Foundations", "description": "Residential and commercial foundation work"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Concrete Repair", "description": "Crack repair, leveling, and restoration"}}
       ]
     },
-    "description": "Columbus Concrete & Design Co is a premier concrete contractor serving Columbus, OH and Franklin County. We specialize in driveways, patios, slabs, foundations, and decorative stamped concrete."
+    "description": "Columbus Concrete & Design Co is a premier concrete contractor serving Columbus, OH and the greater Franklin County area. We specialize in driveways, patios, slabs, foundations, stamped concrete, and decorative finishes. Licensed, insured, and committed to quality craftsmanship."
   }
   </script>
   
@@ -121,17 +145,18 @@ import Footer from '../components/Footer.astro';
     "name": "Columbus Concrete & Design Co",
     "url": "https://columbusconcretecontractor.co/",
     "logo": "https://columbusconcretecontractor.co/images/logo.png",
+    "sameAs": [],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-614-902-3793",
       "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English"
+      "areaServed": ["Columbus", "Franklin County", "Central Ohio"],
+      "availableLanguage": ["English", "Spanish"]
     }
   }
   </script>
 </head>
-<body class="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+<body class="min-h-screen bg-warm-50 text-gray-900 flex flex-col font-sans">
   <Header />
 
   <main class="flex-grow">
@@ -139,6 +164,9 @@ import Footer from '../components/Footer.astro';
   </main>
 
   <Footer />
+  
+  <!-- Sticky CTA for mobile -->
+  <StickyCTA />
 
   <!-- Mobile menu script -->
   <script>
@@ -148,3 +176,11 @@ import Footer from '../components/Footer.astro';
   </script>
 </body>
 </html>
+
+<!-- Sticky Mobile CTA -->
+<div class="fixed bottom-0 left-0 right-0 bg-primary-600 text-white py-3 px-4 flex items-center justify-center gap-3 md:hidden z-50 shadow-lg">
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+  </svg>
+  <a href="tel:+16149023793" class="font-bold">Tap to Call: (614) 902-3793</a>
+</div>
