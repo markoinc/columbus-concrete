@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Columbus Concrete & Design Co</title>
+  <meta name="description" content="Contact Columbus Concrete & Design Co for a free estimate on your concrete project. Driveways, patios, slabs & more in Columbus, OH. Call (614) 902-3793.">
+  <link rel="canonical" href="https://columbusconcretecontractor.co/contact/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Columbus Concrete & Design Co">
+  <meta property="og:description" content="Get a free estimate for your concrete project in Columbus, OH. Call (614) 902-3793 or fill out our contact form.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://columbusconcretecontractor.co/contact/">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://columbusconcretecontractor.co/#business",
+    "name": "Columbus Concrete & Design Co",
+    "telephone": "(614) 902-3793",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Columbus",
+      "addressRegion": "OH",
+      "postalCode": "43215",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 39.9612,
+      "longitude": -82.9988
+    },
+    "url": "https://columbusconcretecontractor.co/contact/",
+    "priceRange": "$$",
+    "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-16:00"],
+    "areaServed": ["Columbus", "Dublin", "Westerville", "Grove City", "Franklin County"]
+  }
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1170px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Header */
+    header {
+      background: #000;
+      padding: 15px 0;
+      border-bottom: 2px solid #ff3131;
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    
+    .logo {
+      color: #ff3131;
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+    
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    
+    nav a:hover {
+      color: #ff3131;
+    }
+    
+    .header-phone {
+      background: #ff3131;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+    
+    .header-phone:hover {
+      background: #cc2727;
+    }
+    
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200') center/cover;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    
+    .hero h1 span {
+      color: #ff3131;
+    }
+    
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .hero-badge {
+      background: rgba(255,255,255,0.1);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      padding: 60px 0;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+    }
+    
+    .contact-info h2 {
+      color: #ff3131;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    
+    .contact-info p {
+      color: #cbd5e0;
+      margin-bottom: 15px;
+    }
+    
+    .contact-info p strong {
+      color: #ff3131;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin: 25px 0;
+      padding: 20px;
+      background: #111;
+      border-radius: 10px;
+      border-left: 4px solid #ff3131;
+    }
+    
+    .contact-icon {
+      font-size: 1.5rem;
+    }
+    
+    .contact-item h4 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .contact-item p {
+      margin: 0;
+    }
+    
+    .contact-item a {
+      color: #ff3131;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Form Card */
+    .form-card {
+      background: #b4b4b4;
+      padding: 30px;
+      border-radius: 15px;
+      border: 3px solid #ff3131;
+    }
+    
+    .form-card h3 {
+      color: #000;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      text-align: center;
+    }
+    
+    .form-subtitle {
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+    }
+    
+    .form-card iframe {
+      border: none;
+      width: 100%;
+      min-height: 450px;
+    }
+    
+    /* Map */
+    .map-section {
+      padding: 0;
+    }
+    
+    .map-section iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+    
+    /* Why Us */
+    .why-section {
+      padding: 50px 0;
+      background: #111;
+    }
+    
+    .why-section h2 {
+      color: #ff3131;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 25px;
+    }
+    
+    .why-item {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .why-icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .why-item h4 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    
+    .why-item p {
+      color: #cbd5e0;
+      font-size: 0.9rem;
+    }
+    
+    /* CTA */
+    .cta-section {
+      background: #ff3131;
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .cta-section h2 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+    
+    .cta-section p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: #fff;
+      color: #ff3131;
+      padding: 15px 35px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      transition: transform 0.3s;
+    }
+    
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Footer */
+    footer {
+      background: #000;
+      padding: 40px 0 20px;
+      text-align: center;
+      border-top: 2px solid #333;
+    }
+    
+    .footer-links {
+      margin-bottom: 20px;
+    }
+    
+    .footer-links a {
+      color: #cbd5e0;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      color: #ff3131;
+    }
+    
+    footer p {
+      color: #666;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">Columbus Concrete & Design Co</a>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="tel:6149023793" class="header-phone">📞 (614) 902-3793</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact <span>Us</span></h1>
+      <p>Get a free estimate for your concrete project in Columbus, OH</p>
+      <div class="hero-badges">
+        <span class="hero-badge">✓ Licensed & Insured</span>
+        <span class="hero-badge">✓ Free Estimates</span>
+        <span class="hero-badge">✓ Quality Guaranteed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+          <p>Ready to start your concrete project? We're here to help! Give us a call or fill out the form for a <strong>FREE estimate</strong>. We respond to all inquiries within 24 hours.</p>
+          
+          <p>At Columbus Concrete & Design Co, we believe in quality work at fair prices. No high-pressure sales tactics, no hidden fees — just honest concrete work you can count on.</p>
+          
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:6149023793">(614) 902-3793</a>
+              <p>Call or text anytime</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <h4>Service Area</h4>
+              <p>Columbus, OH & Franklin County</p>
+              <p style="font-size: 0.9rem;">Including Dublin, Westerville, Grove City, Hilliard, Reynoldsburg, Gahanna, Upper Arlington & more</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <span class="contact-icon">🕐</span>
+            <div>
+              <h4>Business Hours</h4>
+              <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
+              <p>Saturday: 8:00 AM - 4:00 PM</p>
+              <p>Sunday: Closed</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Form -->
+        <div class="form-card">
+          <h3>Request Your Free Estimate</h3>
+          <p class="form-subtitle">No obligation • Response within 24 hours</p>
+          
+          <!-- GHL Survey Form Embed - Replace survey ID with Columbus-specific form when available -->
+          <iframe 
+            src="https://api.leadconnectorhq.com/widget/survey/UXYHkJLpVN3IqJlQjLDI" 
+            style="border:none; width:100%; min-height:450px;" 
+            scrolling="no" 
+            id="ghl-contact-form" 
+            title="Contact Form">
+          </iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="map-section">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194773.38144045974!2d-83.14321449580474!3d39.98310899726073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883889c1b990de71%3A0xe43266f8cfb1b533!2sColumbus%2C%20OH!5e0!3m2!1sen!2sus!4v1704891234567!5m2!1sen!2sus" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Columbus Concrete & Design Co Service Area">
+    </iframe>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-section">
+    <div class="container">
+      <h2>Why Choose Columbus Concrete & Design Co?</h2>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="why-icon">🏆</div>
+          <h4>Quality Work</h4>
+          <p>Expert craftsmanship on every project</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">💰</div>
+          <h4>Fair Pricing</h4>
+          <p>Competitive rates, no hidden fees</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">🛡️</div>
+          <h4>Licensed & Insured</h4>
+          <p>Full coverage for your peace of mind</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">⏰</div>
+          <h4>On-Time Delivery</h4>
+          <p>We respect your time and schedule</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Get Started?</h2>
+      <p>Call now for your free, no-obligation estimate!</p>
+      <a href="tel:6149023793" class="btn">📞 Call (614) 902-3793</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <p>Columbus Concrete & Design Co | Columbus, OH | (614) 902-3793</p>
+      <p>&copy; 2024 Columbus Concrete & Design Co. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
