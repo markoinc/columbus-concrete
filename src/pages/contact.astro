@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+---
+
+<BaseLayout 
+  title="Contact Us | Free Estimate"
+  description="Contact Columbus Concrete & Design Co for a free estimate on your concrete project. Serving Columbus, OH and surrounding areas. Call (614) 902-3793 today."
+  canonicalUrl="https://columbusconcretecontractor.co/contact/"
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Contact Us</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+        Ready to start your concrete project? Get in touch for a free, no-obligation estimate.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Phone</h3>
+                <a href={`tel:${phoneClean}`} class="text-secondary text-lg font-semibold hover:text-secondary-dark transition">{phone}</a>
+                <p class="text-gray-600 text-sm mt-1">Call us for immediate assistance</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Service Area</h3>
+                <p class="text-gray-700">Columbus, OH & Franklin County</p>
+                <p class="text-gray-600 text-sm mt-1">Plus surrounding central Ohio communities</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-bold text-gray-900 mb-1">Business Hours</h3>
+                <p class="text-gray-700">Monday - Friday: 7:00 AM - 6:00 PM</p>
+                <p class="text-gray-700">Saturday: 8:00 AM - 4:00 PM</p>
+                <p class="text-gray-600 text-sm mt-1">Sunday: Closed</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-8 p-6 bg-gray-50 rounded-xl">
+            <h3 class="font-bold text-gray-900 mb-3">What to Expect</h3>
+            <ol class="space-y-2 text-gray-600">
+              <li class="flex items-center gap-2">
+                <span class="bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                Submit your request or call us
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                We'll contact you within 24 hours
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                Schedule a free on-site estimate
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="bg-secondary text-white w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                Receive detailed written quote
+              </li>
+            </ol>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div>
+          <ContactForm source="columbus-contact-page" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

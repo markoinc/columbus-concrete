@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+---
+
+<BaseLayout 
+  title="Thank You"
+  description="Thank you for contacting Columbus Concrete & Design Co. We'll be in touch soon about your concrete project."
+  canonicalUrl="https://columbusconcretecontractor.co/thankyou/"
+>
+  <section class="py-20 bg-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <div class="text-6xl mb-6">✅</div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Thank You!</h1>
+      <p class="text-xl text-gray-600 mb-8">
+        Your request has been received. We'll contact you within 24 hours to discuss your concrete project.
+      </p>
+      
+      <div class="bg-gray-50 rounded-xl p-8 mb-8">
+        <h2 class="text-xl font-bold text-gray-900 mb-4">What Happens Next?</h2>
+        <ol class="text-left space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+            <div>
+              <strong class="text-gray-900">We Review Your Request</strong>
+              <p class="text-gray-600 text-sm">Our team will review your project details within a few hours.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+            <div>
+              <strong class="text-gray-900">We'll Contact You</strong>
+              <p class="text-gray-600 text-sm">Expect a call or email within 24 hours to schedule your free estimate.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+            <div>
+              <strong class="text-gray-900">On-Site Estimate</strong>
+              <p class="text-gray-600 text-sm">We'll visit your property to assess the project and provide a detailed quote.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      
+      <p class="text-gray-600 mb-6">
+        Need immediate assistance? Give us a call:
+      </p>
+      <a href={`tel:${phoneClean}`} class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        Call {phone}
+      </a>
+      
+      <div class="mt-12">
+        <a href="/" class="text-secondary font-semibold hover:text-secondary-dark transition">
+          ← Return to Homepage
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

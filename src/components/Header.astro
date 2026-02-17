@@ -1,0 +1,66 @@
+---
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-200">
+  <!-- Top bar -->
+  <div class="bg-primary text-white py-2 hidden md:block">
+    <div class="max-w-7xl mx-auto px-4 flex justify-between items-center text-sm">
+      <span>Serving Columbus, OH & Surrounding Areas</span>
+      <div class="flex items-center gap-4">
+        <span>Mon-Fri: 7AM-6PM | Sat: 8AM-4PM</span>
+        <a href={`tel:${phoneClean}`} class="font-semibold hover:text-secondary transition">{phone}</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main nav -->
+  <nav class="max-w-7xl mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2">
+        <span class="text-2xl font-bold text-primary">Columbus Concrete</span>
+        <span class="text-secondary font-semibold hidden sm:inline">& Design Co</span>
+      </a>
+      
+      <div class="hidden lg:flex items-center space-x-6">
+        <a href="/services/concrete-driveways/" class="text-gray-700 hover:text-secondary transition font-medium">Driveways</a>
+        <a href="/services/concrete-patios/" class="text-gray-700 hover:text-secondary transition font-medium">Patios</a>
+        <a href="/services/stamped-concrete/" class="text-gray-700 hover:text-secondary transition font-medium">Stamped</a>
+        <a href="/locations/" class="text-gray-700 hover:text-secondary transition font-medium">Service Areas</a>
+        <a href="/about/" class="text-gray-700 hover:text-secondary transition font-medium">About</a>
+        <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-5 py-2.5 rounded-lg font-semibold transition">
+          Free Estimate
+        </a>
+        <a href={`tel:${phoneClean}`} class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-semibold transition flex items-center gap-2">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          {phone}
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="lg:hidden p-2 text-gray-700">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
+      <div class="flex flex-col space-y-3">
+        <a href="/services/concrete-driveways/" class="text-gray-700 hover:text-secondary py-2">Driveways</a>
+        <a href="/services/concrete-patios/" class="text-gray-700 hover:text-secondary py-2">Patios</a>
+        <a href="/services/stamped-concrete/" class="text-gray-700 hover:text-secondary py-2">Stamped Concrete</a>
+        <a href="/locations/" class="text-gray-700 hover:text-secondary py-2">Service Areas</a>
+        <a href="/about/" class="text-gray-700 hover:text-secondary py-2">About Us</a>
+        <a href="/contact/" class="bg-secondary text-white px-4 py-3 rounded-lg font-semibold text-center">
+          Get Free Estimate
+        </a>
+        <a href={`tel:${phoneClean}`} class="bg-primary text-white px-4 py-3 rounded-lg font-semibold text-center">
+          Call {phone}
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

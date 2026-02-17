@@ -1,0 +1,205 @@
+---
+interface Props {
+  source?: string;
+  title?: string;
+  subtitle?: string;
+  dark?: boolean;
+}
+
+const { 
+  source = 'columbus-concrete-co',
+  title = "Get Your Free Estimate",
+  subtitle = "Fill out the form below and we'll get back to you within 24 hours.",
+  dark = false
+} = Astro.props;
+
+const webhookUrl = "https://services.leadconnectorhq.com/hooks/OsNgWuy8oZzLbp5BXbnD/webhook-trigger/1a8ea669-6d42-4e42-be26-e3bbbd5c1a82";
+---
+
+<div class={`rounded-xl p-8 ${dark ? 'bg-primary text-white' : 'bg-white shadow-xl'}`}>
+  <h3 class="text-2xl font-bold mb-2">{title}</h3>
+  <p class={`mb-6 ${dark ? 'text-gray-300' : 'text-gray-600'}`}>{subtitle}</p>
+  
+  <form 
+    id="contact-form" 
+    class="space-y-4"
+    data-webhook={webhookUrl}
+    data-source={source}
+  >
+    <input type="hidden" name="source" value={source} />
+    <input type="hidden" name="page_url" id="page-url" />
+    
+    <div class="grid md:grid-cols-2 gap-4">
+      <div>
+        <label for="firstName" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+          First Name *
+        </label>
+        <input 
+          type="text" 
+          id="firstName" 
+          name="firstName" 
+          required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+          placeholder="John"
+        />
+      </div>
+      <div>
+        <label for="lastName" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+          Last Name *
+        </label>
+        <input 
+          type="text" 
+          id="lastName" 
+          name="lastName" 
+          required
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+          placeholder="Smith"
+        />
+      </div>
+    </div>
+    
+    <div>
+      <label for="email" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        Email Address *
+      </label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        placeholder="john@example.com"
+      />
+    </div>
+    
+    <div>
+      <label for="phone" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        Phone Number *
+      </label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        placeholder="(614) 555-1234"
+      />
+    </div>
+    
+    <div>
+      <label for="serviceType" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        Service Needed *
+      </label>
+      <select 
+        id="serviceType" 
+        name="serviceType" 
+        required
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+      >
+        <option value="">Select a service...</option>
+        <option value="driveway">Concrete Driveway</option>
+        <option value="patio">Concrete Patio</option>
+        <option value="slab">Concrete Slab</option>
+        <option value="stamped">Stamped Concrete</option>
+        <option value="foundation">Foundation Work</option>
+        <option value="walkway">Walkways/Sidewalks</option>
+        <option value="repair">Concrete Repair</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    
+    <div>
+      <label for="message" class={`block text-sm font-medium mb-1 ${dark ? 'text-gray-300' : 'text-gray-700'}`}>
+        Tell Us About Your Project
+      </label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="3"
+        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-secondary focus:border-transparent text-gray-900"
+        placeholder="Describe your project, approximate size, timeline, etc."
+      ></textarea>
+    </div>
+    
+    <div class="flex items-start gap-2">
+      <input 
+        type="checkbox" 
+        id="consent" 
+        name="consent" 
+        required
+        class="mt-1"
+      />
+      <label for="consent" class={`text-sm ${dark ? 'text-gray-300' : 'text-gray-600'}`}>
+        I agree to be contacted about my project. 
+        <a href="/privacy/" class="underline">Privacy Policy</a>
+      </label>
+    </div>
+    
+    <button 
+      type="submit"
+      class="w-full bg-secondary hover:bg-secondary-dark text-white font-bold py-4 px-6 rounded-lg text-lg transition transform hover:scale-[1.02] shadow-lg"
+    >
+      Get My Free Estimate →
+    </button>
+    
+    <p class={`text-center text-sm ${dark ? 'text-gray-400' : 'text-gray-500'}`}>
+      🔒 Your information is secure and confidential
+    </p>
+  </form>
+  
+  <div id="form-success" class="hidden text-center py-8">
+    <div class="text-5xl mb-4">✅</div>
+    <h4 class="text-xl font-bold mb-2">Thank You!</h4>
+    <p class={dark ? 'text-gray-300' : 'text-gray-600'}>
+      We'll contact you within 24 hours to discuss your project.
+    </p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const pageUrl = document.getElementById('page-url') as HTMLInputElement;
+    
+    if (pageUrl) {
+      pageUrl.value = window.location.href;
+    }
+    
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const webhookUrl = form.dataset.webhook;
+      
+      const data: Record<string, string> = {};
+      formData.forEach((value, key) => {
+        data[key] = value.toString();
+      });
+      
+      try {
+        const response = await fetch(webhookUrl!, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+        
+        if (response.ok) {
+          form.classList.add('hidden');
+          document.getElementById('form-success')?.classList.remove('hidden');
+          
+          // Redirect to thank you page after short delay
+          setTimeout(() => {
+            window.location.href = '/thankyou/';
+          }, 1500);
+        } else {
+          alert('There was an error submitting your form. Please try again or call us directly at (614) 902-3793.');
+        }
+      } catch (error) {
+        console.error('Form submission error:', error);
+        alert('There was an error submitting your form. Please try again or call us directly at (614) 902-3793.');
+      }
+    });
+  });
+</script>

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import locations from '../../data/locations.json';
+
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+---
+
+<BaseLayout 
+  title="Service Areas | Columbus & Franklin County"
+  description="Columbus Concrete & Design Co serves Columbus, OH and surrounding areas including Dublin, Westerville, Grove City, Hilliard, and all of Franklin County."
+  canonicalUrl="https://columbusconcretecontractor.co/locations/"
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold mb-6">Areas We Serve</h1>
+      <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+        Columbus Concrete & Design Co proudly serves homeowners and businesses throughout Columbus, Franklin County, and surrounding central Ohio communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Locations Grid -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {locations.map((location) => (
+          <a href={`/locations/${location.slug}/`} class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition group border border-gray-100">
+            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">{location.name}, OH</h2>
+            <p class="text-gray-600 text-sm mb-3">{location.description.slice(0, 100)}...</p>
+            <div class="flex justify-between items-center text-sm">
+              <span class="text-gray-500">{location.county} County</span>
+              <span class="text-secondary font-semibold">Learn More →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get a Free Estimate</h2>
+        <p class="text-gray-600">Serving all of central Ohio with quality concrete services.</p>
+      </div>
+      <ContactForm source="columbus-locations-page" />
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+---
+
+<BaseLayout 
+  title="Page Not Found"
+  description="The page you're looking for doesn't exist. Return to Columbus Concrete & Design Co homepage."
+>
+  <section class="py-20 bg-white">
+    <div class="max-w-2xl mx-auto px-4 text-center">
+      <div class="text-8xl font-bold text-gray-200 mb-4">404</div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Page Not Found</h1>
+      <p class="text-xl text-gray-600 mb-8">
+        Sorry, the page you're looking for doesn't exist or has been moved.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+          Go to Homepage
+        </a>
+        <a href="/contact/" class="bg-gray-100 hover:bg-gray-200 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg transition">
+          Contact Us
+        </a>
+      </div>
+      
+      <div class="mt-12 p-6 bg-gray-50 rounded-xl">
+        <h2 class="font-bold text-gray-900 mb-4">Looking for something specific?</h2>
+        <div class="grid sm:grid-cols-2 gap-4 text-left">
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Services</h3>
+            <ul class="space-y-1 text-gray-600 text-sm">
+              <li><a href="/services/concrete-driveways/" class="hover:text-secondary">Concrete Driveways</a></li>
+              <li><a href="/services/concrete-patios/" class="hover:text-secondary">Concrete Patios</a></li>
+              <li><a href="/services/stamped-concrete/" class="hover:text-secondary">Stamped Concrete</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-2">Company</h3>
+            <ul class="space-y-1 text-gray-600 text-sm">
+              <li><a href="/about/" class="hover:text-secondary">About Us</a></li>
+              <li><a href="/locations/" class="hover:text-secondary">Service Areas</a></li>
+              <li><a href="/contact/" class="hover:text-secondary">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

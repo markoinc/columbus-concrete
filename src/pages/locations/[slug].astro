@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactForm from '../../components/ContactForm.astro';
+import locations from '../../data/locations.json';
+import services from '../../data/services.json';
+
+export function getStaticPaths() {
+  return locations.map((location) => ({
+    params: { slug: location.slug },
+    props: { location }
+  }));
+}
+
+const { location } = Astro.props;
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+
+const otherLocations = locations.filter(l => l.slug !== location.slug).slice(0, 6);
+
+const locationSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `Columbus Concrete & Design Co - ${location.name}`,
+  "description": location.description,
+  "telephone": "(614) 902-3793",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": location.name,
+    "addressRegion": "OH",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": location.name
+  }
+};
+---
+
+<BaseLayout 
+  title={location.title}
+  description={location.description}
+  canonicalUrl={`https://columbusconcretecontractor.co/locations/${location.slug}/`}
+  schema={locationSchema}
+>
+  <!-- Hero -->
+  <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl lg:text-5xl font-bold mb-6">Concrete Contractors in {location.name}, OH</h1>
+          <p class="text-xl text-gray-200 mb-6">{location.description}</p>
+          <p class="text-gray-300 mb-8">
+            Located just {location.distance} from Columbus, {location.name} residents enjoy the same quality concrete services and competitive pricing as our Columbus customers. We're proud to serve the {location.county} County community with professional concrete work.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition text-center">
+              Get Free Estimate
+            </a>
+            <a href={`tel:${phoneClean}`} class="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition text-center">
+              Call {phone}
+            </a>
+          </div>
+        </div>
+        <div class="lg:pl-8">
+          <ContactForm source={`columbus-${location.slug}`} title={`Get a Free Estimate in ${location.name}`} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Concrete Services in {location.name}</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((service) => (
+          <a href={`/services/${service.slug}/`} class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition group">
+            <div class="text-3xl mb-3">{service.icon}</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">{service.name}</h3>
+            <p class="text-gray-600 text-sm">{service.description.slice(0, 100)}...</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Locations -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Other Areas We Serve</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {otherLocations.map((loc) => (
+          <a href={`/locations/${loc.slug}/`} class="bg-white rounded-lg p-4 text-center hover:bg-secondary hover:text-white transition group shadow-sm">
+            <span class="font-medium">{loc.name}</span>
+          </a>
+        ))}
+      </div>
+      <div class="text-center mt-6">
+        <a href="/locations/" class="text-secondary font-semibold hover:text-secondary-dark transition">
+          View All Service Areas →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Ready for Your {location.name} Concrete Project?</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Contact us today for a free estimate. We're just {location.distance} from Columbus and ready to serve you.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+          Get Free Estimate
+        </a>
+        <a href={`tel:${phoneClean}`} class="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+          Call {phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

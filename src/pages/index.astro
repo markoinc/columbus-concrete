@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import services from '../data/services.json';
+import locations from '../data/locations.json';
+
+const phone = '(614) 902-3793';
+const phoneClean = '6149023793';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a concrete driveway cost in Columbus, OH?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concrete driveway costs in Columbus typically range from $8-15 per square foot, depending on size, thickness, and finish options. A standard 600 sq ft driveway costs $4,800-$9,000. Stamped or decorative concrete costs more. Contact us for a free, detailed estimate for your specific project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does concrete take to cure in Ohio weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Concrete reaches initial set in 24-48 hours, but full curing takes 28 days. In Ohio's variable weather, we recommend staying off new concrete for at least 7 days and avoiding heavy vehicles for 2 weeks. We schedule projects during optimal weather conditions when possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer free estimates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We provide free, no-obligation estimates for all concrete projects in Columbus and surrounding areas. We'll visit your property, discuss your needs, and provide a detailed written quote within 24-48 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve Columbus, OH and the greater Franklin County area including Dublin, Westerville, Grove City, Hilliard, Reynoldsburg, Gahanna, Upper Arlington, Worthington, Powell, and surrounding communities."
+      }
+    }
+  ]
+};
+---
+
+<BaseLayout 
+  title="Columbus Concrete Contractor | Driveways, Patios & More"
+  description="Columbus Concrete & Design Co - Top-rated concrete contractors serving Columbus, OH. Driveways, patios, foundations & decorative concrete. Call (614) 902-3793 for your free estimate!"
+  canonicalUrl="https://columbusconcretecontractor.co/"
+  schema={faqSchema}
+>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-primary-dark text-white py-20 lg:py-28">
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-6">
+            <span class="text-secondary">★★★★★</span>
+            <span class="text-sm">Top-Rated Columbus Concrete Contractor</span>
+          </div>
+          <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+            Professional Concrete Services in Columbus, OH
+          </h1>
+          <p class="text-xl text-gray-200 mb-8 leading-relaxed">
+            Transform your property with quality concrete work. From stunning driveways to beautiful patios, we deliver exceptional craftsmanship that lasts for decades.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition text-center shadow-lg">
+              Get Free Estimate
+            </a>
+            <a href={`tel:${phoneClean}`} class="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition text-center flex items-center justify-center gap-2">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+              {phone}
+            </a>
+          </div>
+          <div class="flex items-center gap-8 mt-8 text-sm">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Licensed & Insured
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Free Estimates
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Quality Guaranteed
+            </div>
+          </div>
+        </div>
+        <div class="lg:pl-8">
+          <ContactForm source="columbus-concrete-homepage" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Our Concrete Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From driveways to decorative stamped concrete, we offer a full range of professional concrete services for Columbus homeowners and businesses.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.slice(0, 6).map((service) => (
+          <a href={`/services/${service.slug}/`} class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition group border border-gray-100">
+            <div class="text-4xl mb-4">{service.icon}</div>
+            <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-secondary transition">{service.name}</h3>
+            <p class="text-gray-600 mb-4">{service.description.slice(0, 120)}...</p>
+            <span class="text-secondary font-semibold flex items-center gap-2">
+              Learn More 
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Why Columbus Homeowners Choose Us</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We're committed to delivering exceptional concrete work that stands the test of time.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Quality Materials</h3>
+          <p class="text-gray-600 text-sm">We use premium concrete mixes rated for Ohio's freeze-thaw cycles</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Licensed & Insured</h3>
+          <p class="text-gray-600 text-sm">Fully licensed and insured for your peace of mind</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">On-Time Completion</h3>
+          <p class="text-gray-600 text-sm">We respect your time with efficient project management</p>
+        </div>
+        <div class="text-center">
+          <div class="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Competitive Pricing</h3>
+          <p class="text-gray-600 text-sm">Fair, transparent pricing with free detailed estimates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Serving Columbus & Surrounding Areas</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          We proudly serve homeowners and businesses throughout Franklin County and central Ohio.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {locations.slice(0, 15).map((location) => (
+          <a href={`/locations/${location.slug}/`} class="bg-gray-50 rounded-lg p-4 text-center hover:bg-secondary hover:text-white transition group">
+            <span class="font-medium">{location.name}</span>
+          </a>
+        ))}
+      </div>
+      
+      <div class="text-center mt-8">
+        <a href="/locations/" class="text-secondary font-semibold hover:text-secondary-dark transition">
+          View All Service Areas →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+      </div>
+      
+      <div class="space-y-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg text-gray-900 mb-2">How much does a concrete driveway cost in Columbus, OH?</h3>
+          <p class="text-gray-600">Concrete driveway costs in Columbus typically range from $8-15 per square foot, depending on size, thickness, and finish options. A standard 600 sq ft driveway costs $4,800-$9,000. Stamped or decorative concrete costs more. Contact us for a free, detailed estimate for your specific project.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg text-gray-900 mb-2">How long does concrete take to cure in Ohio weather?</h3>
+          <p class="text-gray-600">Concrete reaches initial set in 24-48 hours, but full curing takes 28 days. In Ohio's variable weather, we recommend staying off new concrete for at least 7 days and avoiding heavy vehicles for 2 weeks. We schedule projects during optimal weather conditions when possible.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg text-gray-900 mb-2">Do you offer free estimates?</h3>
+          <p class="text-gray-600">Yes! We provide free, no-obligation estimates for all concrete projects in Columbus and surrounding areas. We'll visit your property, discuss your needs, and provide a detailed written quote within 24-48 hours.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <h3 class="font-bold text-lg text-gray-900 mb-2">What areas do you serve?</h3>
+          <p class="text-gray-600">We serve Columbus, OH and the greater Franklin County area including Dublin, Westerville, Grove City, Hilliard, Reynoldsburg, Gahanna, Upper Arlington, Worthington, Powell, and surrounding communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready to Start Your Concrete Project?</h2>
+      <p class="text-xl text-gray-200 mb-8">
+        Get a free, no-obligation estimate from Columbus's trusted concrete contractors.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/contact/" class="bg-secondary hover:bg-secondary-dark text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg">
+          Get Free Estimate
+        </a>
+        <a href={`tel:${phoneClean}`} class="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg transition flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Call {phone}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
